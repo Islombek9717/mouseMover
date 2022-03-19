@@ -1,0 +1,7 @@
+export const message = (data) => {
+  let message = "";
+  message = message + Math.round(csvFormat(data).length / 1024) + "Kb\n";
+  message = message + data.length + " rows\n";
+  message = message + data.columns.length + " columns";
+  return message;
+};
